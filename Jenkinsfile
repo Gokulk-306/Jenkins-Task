@@ -18,10 +18,11 @@ pipeline {
    post {
         success {
             emailext (
-                to: 'divyatest2302@gmail.com',
+                to: 'gokulsmart515@gmail.com',
                 subject: "SUCCESS: Job '${env.JOB_NAME}' #${env.BUILD_NUMBER}",
                 body: """
                 <h2>Build Successful!</h2>
+                <h2>Jenkins Task Completed Successfully!</h2>
                 <p>Job: ${env.JOB_NAME}</p>
                 <p>Build Number: ${env.BUILD_NUMBER}</p>
                 <p>Check details: <a href="${env.BUILD_URL}">${env.BUILD_URL}</a></p>
@@ -32,7 +33,7 @@ pipeline {
 
         failure {
             emailext (
-                to: 'divyatest2302@gmail.com',
+                to: 'gokulsmart515@gmail.com',
                 subject: " FAILURE: Job '${env.JOB_NAME}' #${env.BUILD_NUMBER}",
                 body: """
                 <h2>Build Failed!</h2>
