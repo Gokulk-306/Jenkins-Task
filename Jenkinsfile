@@ -36,7 +36,7 @@ pipeline {
                 to: 'gokulsmart515@gmail.com',
                 subject: " FAILURE: Job '${env.JOB_NAME}' #${env.BUILD_NUMBER}",
                 body: """
-                <h2>Build Failed!</h2>
+                <h2>Build Failed!, Try Again Later </h2>
                 <p>Job: ${env.JOB_NAME}</p>
                 <p>Build Number: ${env.BUILD_NUMBER}</p>
                 <p>Check console log: <a href="${env.BUILD_URL}">${env.BUILD_URL}</a></p>
